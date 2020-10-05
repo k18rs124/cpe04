@@ -163,13 +163,17 @@
 
     // Alarmの処理
     function alarm(){
-        ver canvas=$("#mycanvas")[0];
-        ver ctx=canvas.getContext("2d");
-        ver img=new Image();
-        img.src="ksuisbg.gif";
-        img.onload=function(){
+        ver canvas = $("#mycanvas")[0];
+        ver ctx = canvas.getContext("2d");
+        ver img = new Image();
+        img.src = "ksuisbg.gif";
+        img.onload = function(){
           ctx.drawImage(img,0,0,300,300);
         }
+
+        var audio = new Audio();
+        audio.src = "pin.wav";
+        audio.play();
         
     }
     
